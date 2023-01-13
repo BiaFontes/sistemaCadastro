@@ -1,0 +1,304 @@
+﻿<Window x:Class="Teste1.TesteTela.Tela1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Teste1.TesteTela"
+        mc:Ignorable="d"
+        Title="Funcionários" Height="450" Width="800" Background="#FFECECEC">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <TextBlock x:Name="TbCodFun" Text="Código" Grid.Row="0" Margin="5"/>
+                <TextBox x:Name="TxtCodFun" Grid.Row="1" Margin="5,0"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <TextBlock x:Name="TbNomeFun" Text="Nome Completo" Grid.Row="0" Margin="5"/>
+                <TextBox x:Name="TxtNomeFun" Grid.Row="1" Margin="5,0"/>
+            </StackPanel>
+            <StackPanel Grid.Column="2">
+                <TextBlock x:Name="TbMatEsoc" Text="Mat. E-Social" Grid.Row="0" Margin="5"/>
+                <TextBox x:Name="TxtMatEsoc" Grid.Row="1" Margin="5,0"/>
+            </StackPanel>  
+        </Grid>
+        <Grid Grid.Row="1">
+            <TabControl x:Name="TabsControls" Background="#FFECECEC">
+                <TabItem x:Name="Tab1" Header="Contrato" IsSelected="True">
+                    <GroupBox Margin="5" BorderBrush="#FF939393" >
+                        <Grid Margin="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.43*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="0.3*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock x:Name="TbCodEmp" Text="Cod"/>
+                                    <TextBox x:Name="txtCodEmp" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock x:Name="TbNomeEmp" Text="Empresa"/>
+                                    <TextBox x:Name="txtEmp" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="2">
+                                    <TextBlock x:Name="TbEmpMunic" Text="Município" />
+                                    <TextBox x:Name="txtEmpMunic" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="3">
+                                    <TextBlock x:Name="TbEmpUf" Text="Uf"/>
+                                    <TextBox x:Name="txtEmpUf" Margin="5" Height="20"/>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.5*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock x:Name="TbCodCargo" Text="Cod"/>
+                                    <TextBox x:Name="txtCodCargo" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock x:Name="TbNomeCargo" Text="Cargo"/>
+                                    <TextBox x:Name="txtCargo" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="2">
+                                    <TextBlock x:Name="TbSalario" Text="Salário" />
+                                    <TextBox x:Name="txtSalario" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="3">
+                                    <TextBlock x:Name="TbRecPor" Text="Modo de Pagamento"/>
+                                    <ComboBox x:Name="cboRecPor" Margin="5" Height="20"/>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.2*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock x:Name="TbCodSetor" Text="Cod"/>
+                                    <TextBox x:Name="txtCodSetor" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock x:Name="TbNomeSetor" Text="Setor"/>
+                                    <TextBox x:Name="txtNomeSetor" Margin="5" Height="20"/>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.2*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock x:Name="TbCodHora" Text="Cod"/>
+                                    <TextBox x:Name="txtCodHora" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock x:Name="TbHorario" Text="Horário"/>
+                                    <TextBox x:Name="txtHorario" Margin="5" Height="20"/>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="4">
+
+                            </Grid>
+                        </Grid>
+                    </GroupBox>                    
+                </TabItem>
+                <TabItem x:Name="Tab2" Header="Documentos" IsSelected="True">
+                    <GroupBox Margin="5" BorderBrush="#FF939393">
+                        <Grid Margin="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock x:Name="TbRg" Text="RG"/>
+                                    <TextBox x:Name="txtRg" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock x:Name="TbSerRg" Text="Serie"/>
+                                    <TextBox x:Name="txtSerRg" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="2">
+                                    <TextBlock x:Name="TbOrgEmi" Text="Orgão Emissor"/>
+                                    <TextBox x:Name="txtOrgEmi" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="3">
+                                    <TextBlock x:Name="TbUfRg" Text="UF"/>
+                                    <ComboBox x:Name="cboUfRg" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="4">
+                                    <TextBlock x:Name="TbDtEmi" Text="Data Emissão"/>
+                                    <TextBox x:Name="txtDtEmi" Margin="5" Height="20"/>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2.5*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock x:Name="TbCpf" Text="CPF"/>
+                                    <TextBox x:Name="txtCpf" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock x:Name="TbNumTitulo" Text="Titulo"/>
+                                    <TextBox x:Name="txtTitulo" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="2">
+                                    <TextBlock x:Name="TbZona" Text="Zona"/>
+                                    <TextBox x:Name="txtZona" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="3">
+                                    <TextBlock x:Name="TbSecao" Text="Seção"/>
+                                    <TextBox x:Name="txtSecao" Margin="5" Height="20"/>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="5*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock x:Name="TbNcnh" Text="N° CNH"/>
+                                    <TextBox x:Name="txtNcnh" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock x:Name="TbDtEmiCnh" Text="Data Emissão"/>
+                                    <TextBox x:Name="txtDtEmiCnh" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="2">
+                                    <TextBlock x:Name="TbDtVencCnh" Text="Data Vencimento"/>
+                                    <TextBox x:Name="txtDtVencCnh" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="3">
+                                    <TextBlock x:Name="TbDtPriCnh" Text="Data 1ª CNH"/>
+                                    <TextBox x:Name="txtDtPriCnh" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="4">
+                                    <TextBlock x:Name="TbOrgEmiCnh" Text="Orgão Emissor"/>
+                                    <TextBox x:Name="txtOrgEmiCnh" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="5">
+                                    <TextBlock x:Name="TbCatCnh" Text="Categoria"/>
+                                    <ComboBox x:Name="txtCatCnh" Margin="5" Height="20"/>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="8*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="8*"/>
+                                    <ColumnDefinition Width="2.5*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="5*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock x:Name="TbCodPais" Text="Cod"/>
+                                    <TextBox x:Name="txtCodPais" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock x:Name="TbPaisNat" Text="Nacionalidade"/>
+                                    <TextBox x:Name="txtPaisNat" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="2">
+                                    <Button x:Name="BtnPesqPais" Content="pe" Margin="5,21"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="3">
+                                    <TextBlock x:Name="TbCodCid" Text="Cod"/>
+                                    <TextBox x:Name="txtCodCid" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="4">
+                                    <TextBlock x:Name="TbCidNat" Text="Naturalidade"/>
+                                    <ComboBox x:Name="txtCidNat" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="5">
+                                    <TextBlock x:Name="TbUfNat" Text="UF"/>
+                                    <ComboBox x:Name="txtUfNat" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="6">
+                                    <Button x:Name="BtnPesqCid" Content="pe" Margin="5,21"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="7">
+                                    <TextBlock x:Name="TbDtNasc" Text="Data Nascimento"/>
+                                    <TextBox x:Name="txtDtNasc" Margin="5" Height="20"/>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="4">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock x:Name="TbNomeMae" Text="Nome Mãe"/>
+                                    <TextBox x:Name="txtNomeMae" Margin="5" Height="20"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock x:Name="TbNomePai" Text="Nome Pai"/>
+                                    <TextBox x:Name="txtNomePai" Margin="5" Height="20"/>
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                </TabItem>
+                <TabItem x:Name="Tab3" Header="Endereço" IsSelected="True">
+                    <GroupBox Margin="5" BorderBrush="#FF939393">
+                        <Grid Margin="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                        </Grid>
+                        
+                    </GroupBox>
+                    
+                </TabItem>
+                
+            </TabControl>
+        </Grid>
+    </Grid>
+</Window>
